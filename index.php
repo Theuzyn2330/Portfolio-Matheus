@@ -104,7 +104,6 @@
             
             currentPosition += (-direction * cardWidth);
 
-            // Evita que o carrossel passe do início ou do fim
             if (currentPosition > 0) {
                 currentPosition = 0;
             } else if (currentPosition < maxScroll) {
