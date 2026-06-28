@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Moderno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-<link rel="stylesheet" href="assets/css/style.css">
 
+<?php
+// Puxa a estrutura inicial, CSS, fontes e a abertura do body
+    include 'componentes/header.php';
 
-</head>
-<body>
+// Puxa barra de navegação
+    include 'componentes/menu.php';
 
+?>
     <div class="bg-background"></div>
     <div class="neon-glow"></div>
-
-    <header>
-        <div class="logo">Theuzyn Dev</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Início</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <main class="hero">
         <div class="hero-content">
