@@ -15,7 +15,7 @@
             min-height: 100vh;
         }
 
-        /* --- IMAGEM FIXA DE FUNDO (CORRIGIDA) --- */
+        /* --- IMAGEM FIXA DE FUNDO --- */
 .bg-background {
     position: fixed;
     top: 0;
@@ -26,8 +26,6 @@
     background-image: url('../imagens/fundo.jpeg');
     
     /* 1. Controlando o Zoom: */
-    /* 'contain' mostra a imagem inteira sem cortes. 
-       Se preferir que ela preencha tudo sem distorcer (mesmo com pequenos cortes), use 'cover'. */
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -253,8 +251,72 @@
         .card-img {
             width: 100%;
             height: 180px;
+            border: none; 
             background-size: cover;
             background-position: center;
+        }
+        .card-info {
+            padding: 25px;
+        }
+
+        .card-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-info p {
+            font-size: 0.9rem;
+            color: #a0a0a5;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-link:hover {
+            text-shadow: 0 0 8px #00f2fe;
+        }
+
+        /* Card de musicas*/
+        .music-card {
+            width: 320px;
+            background: rgba(20, 20, 25, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+
+        .music-card:hover {
+            transform: translateY(-10px);
+            border-color: #00f2fe;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-player {
+            width: 100%;
+            height: 180px;
+            border: none;
+            display: block; 
         }
 
         .card-info {

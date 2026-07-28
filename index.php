@@ -9,7 +9,7 @@
 ?>
 
 <!-- FUNDO --->
- 
+   
 <div class="bg-background"></div>
 <div class="neon-glow"></div>
 
@@ -26,6 +26,9 @@
     //Carrosel de projetos (certamente vou por pra aparecer so quando ir na opção que ta na barra de navegação)
     include 'paginas/projetos.php';
 
+    //Carrosel listando musicas
+    include 'paginas/musicas.php';
+
     //Puxa o fechamento das tags e os scripts finais
-    include  'componentes/footer.php';
+    include 'componentes/footer.php';
 ?>

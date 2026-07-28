@@ -1,23 +1,26 @@
 
     <script>
-        const track = document.getElementById('track');
-        let currentPosition = 0;
-        
-        // Largura do card (320px) + Espaçamento gap (30px)
-        const cardWidth = 350; 
+        const cardWidth = 350;
 
-        function moveCarousel(direction) {
-            const maxScroll = -(track.children.length - Math.floor(window.innerWidth / cardWidth)) * cardWidth;
-            
-            currentPosition += (-direction * cardWidth);
+        function moveCarousel(direction, button) {
+            const section = button?.closest('section');
+            const track = section?.querySelector('.carousel-track');
 
-            if (currentPosition > 0) {
-                currentPosition = 0;
-            } else if (currentPosition < maxScroll) {
-                currentPosition = maxScroll;
+            if (!track) return;
+
+            const visibleCards = Math.max(1, Math.floor(window.innerWidth / cardWidth));
+            const maxScroll = -(track.children.length - visibleCards) * cardWidth;
+            const currentPosition = parseInt(track.dataset.position || '0', 10) + (-direction * cardWidth);
+            let newPosition = currentPosition;
+
+            if (newPosition > 0) {
+                newPosition = 0;
+            } else if (newPosition < maxScroll) {
+                newPosition = maxScroll;
             }
 
-            track.style.transform = `translateX(${currentPosition}px)`;
+            track.dataset.position = newPosition;
+            track.style.transform = `translateX(${newPosition}px)`;
         }
     </script>
 </body>
