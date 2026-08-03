@@ -11,7 +11,6 @@ $videos = [];
 $erroApi = null;
 
 if (!empty($apiKey) && !empty($videoIds)) {
-    // URL direta da API do YouTube (Sem cURL de token, sem 403!)
     $url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}&key={$apiKey}";
 
     // Requisição via cURL simples
