@@ -9,7 +9,7 @@
             <div class="carousel-track">
                 
                 <div class="project-card">
-                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpeg');"></div>
+                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
                         <p>Area em construção</p>
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpeg');"></div>
+                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
                         <p>Area em construção</p>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpeg');"></div>
+                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
                         <p>Area em construção</p>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpeg');"></div>
+                    <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
                         <p>Area em construção</p>

@@ -379,15 +379,87 @@
         .btn-left { left: 2%; }
         .btn-right { right: 2%; }
 
-        /* --- RESPONSIVIDADE --- */
+/* --- RESPONSIVIDADE --- */
+        
+        /* Tablets e telas médias */
         @media (max-width: 968px) {
             .hero {
                 flex-direction: column-reverse;
-                text-align: center;
                 padding-top: 140px;
-                gap: 50px;
+                gap: 40px;
+                padding-left: 5%;
+                padding-right: 5%;
             }
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero-image-profile { width: 280px; height: 280px; }
-            .nav-links { display: none; }
+            .hero-content h1 { 
+                font-size: 2.5rem; 
+            }
+            /* Centraliza a imagem no tablet */
+            .hero-image-profile { 
+                width: 250px; 
+                height: 250px; 
+                margin: 0 auto;
+            }
+            .nav-links { 
+                display: none; 
+            }
+        }
+
+        /* Celulares */
+        @media (max-width: 768px) {
+            /* Header e Hero */
+            header { 
+                padding: 15px 5%; 
+            }
+            
+            .hero-content h1 { 
+                font-size: 2rem; 
+            }
+            
+            .hero-content p { 
+                font-size: 0.95rem; 
+            }
+            
+            /* Reduz a foto de perfil para caber certinho no mobile (image_3bac77.jpg) */
+            .hero-image-profile {
+                width: 200px;
+                height: 200px;
+            }
+
+            /* O neon gigante estava vazando a tela, reduzimos aqui */
+            .neon-glow {
+                width: 300px;
+                height: 300px;
+            }
+
+            /* Seção de Projetos (image_3bac95.jpg) */
+            .projects-section {
+                padding: 60px 5%; /* Diminui o respiro gigante no mobile */
+            }
+            
+            .projects-section h2 { 
+                font-size: 2rem; 
+                margin-bottom: 30px; 
+            }
+
+            /* Truque de mestre: largura máxima, mas adaptável */
+            .project-card, .music-card {
+                width: 100%; 
+                max-width: 280px; 
+                margin: 0 auto;
+            }
+
+            /* Abre espaço nas laterais para os botões do carrossel não ficarem em cima do card */
+            .carousel-container {
+                padding: 20px 45px; 
+            }
+
+            /* Ajusta os botões para ficarem nas pontas da tela e menores */
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .btn-left { left: 0; }
+            .btn-right { right: 0; }
         }
