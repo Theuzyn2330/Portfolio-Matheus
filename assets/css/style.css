@@ -31,7 +31,7 @@
     background-repeat: no-repeat;
 
     background-position: center;
-    filter: brightness(0.50) contrast(1.2) blur(1px);; 
+    filter: brightness(0.50) contrast(1.5) blur(5px);; 
 }
 
         /* --- EFEITO NEON DE FUNDO --- */

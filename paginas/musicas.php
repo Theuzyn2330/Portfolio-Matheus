@@ -11,7 +11,8 @@ $videos = [];
 $erroApi = null;
 
 if (!empty($apiKey) && !empty($videoIds)) {
-    $url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}&key={$apiKey}";
+
+$url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}&key={$apiKey}";
 
     // Requisição via cURL simples
     $ch = curl_init();
@@ -53,7 +54,6 @@ if (!empty($apiKey) && !empty($videoIds)) {
                 <?php foreach ($videos as $video): 
                     $titulo = $video['snippet']['title'];
                     $canal = $video['snippet']['channelTitle'];
-                    // Pega a capa em alta resolução (se não tiver, pega a padrão)
                     $thumbnail = $video['snippet']['thumbnails']['high']['url'] ?? $video['snippet']['thumbnails']['default']['url'];
                     $videoId = $video['id'];
                     $linkYoutube = "https://www.youtube.com/watch?v={$videoId}";

@@ -12,7 +12,7 @@
                     <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
-                        <p>Area em construção</p>
+                        <p>🚧Coming Soon</p>
                         <a href="#" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                     <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
-                        <p>Area em construção</p>
+                        <p>🚧Coming Soon</p>
                         <a href="#" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
-                        <p>Area em construção</p>
+                        <p>🚧Coming Soon</p>
                         <a href="#" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="card-img" style="background-image: url('assets/imagens/projetos/construcion.jpg');"></div>
                     <div class="card-info">
                         <h3>Em construção</h3>
-                        <p>Area em construção</p>
+                        <p>🚧Coming Soon</p>
                         <a href="#" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
