@@ -2,10 +2,10 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+$dotenv->safeLoad();
 
-$apiKey = $_ENV['YOUTUBE_API_KEY'] ?? '';
-$videoIds = str_replace(["\r", "\n", " "], '', $_ENV['YOUTUBE_VIDEO_IDS'] ?? '');
+$apiKey = $_ENV['YOUTUBE_API_KEY'] ?? getenv('YOUTUBE_API_KEY') ?? '';
+$videoIds = str_replace(["\r", "\n", " "], '', $_ENV['YOUTUBE_VIDEO_IDS'] ?? getenv('YOUTUBE_VIDEO_IDS') ?? '');
 
 $videos = [];
 $erroApi = null;
