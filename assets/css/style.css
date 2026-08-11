@@ -216,7 +216,7 @@
 
         /* --- SEÇÃO DO CARROSSEL (PROJETOS) --- */
         .projects-section {
-            padding: 100px 10%;
+            padding: 20px 10%;
             position: relative;
         }
 
@@ -243,12 +243,21 @@
         .carousel-track {
             display: flex;
             gap: 30px;
-            transition: transform 0.5s ease-in-out;
-            width: max-content;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            touch-action: pan-x;
+        }
+        .carousel-track::-webkit-scrollbar {
+            display: none;
         }
 
         /* Cards do Carrossel */
         .project-card {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
             width: 320px;
             background: rgba(20, 20, 25, 0.6);
             backdrop-filter: blur(10px);
@@ -304,6 +313,8 @@
 
         /* Card de musicas*/
         .music-card {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
             width: 320px;
             background: rgba(20, 20, 25, 0.6);
             backdrop-filter: blur(10px);
@@ -395,11 +406,6 @@
         .btn-left { left: 2%; }
         .btn-right { right: 2%; }
 
-
-
-
-
-
 /* --- RESPONSIVIDADE --- */
         
 @media (max-width: 968px) {
@@ -428,25 +434,24 @@
     /* ESCONDE O MENU NA LATERAL E PREPARA O ESTILO MOBILE */
     .nav-links { 
         position: absolute;
-        top: 100%; /* Fica logo abaixo do header */
-        right: -100%; /* Esconde fora da tela à direita */
+        top: 100%; 
+        right: -100%; 
         
         /* --- A MÁGICA ACONTECE AQUI --- */
-        width: 250px; /* Largura fixa, não cobre a tela toda */
+        width: 250px; 
         height: 100vh;
         
         background: rgba(10, 10, 12, 0.95);
         backdrop-filter: blur(15px);
         flex-direction: column;
-        align-items: center; /* Centraliza os links dentro do menu lateral */
+        align-items: center; 
         justify-content: flex-start;
-        padding-top: 40px; /* Dá um respiro no topo */
-        gap: 30px;
+        padding-top: 40px; 
         transition: right 0.4s ease-in-out;
         
         /* --- ESTÉTICA DO MENU LATERAL --- */
-        border-left: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil */
-        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.6); /* Sombra para separar do fundo */
+        border-left: 1px solid rgba(255, 255, 255, 0.05); 
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.6); 
     }
 
     /* CLASSE QUE FARÁ O MENU APARECER QUANDO CLICADO */
@@ -470,21 +475,21 @@
                 font-size: 0.95rem; 
             }
             
-            /* Reduz a foto de perfil para caber certinho no mobile (image_3bac77.jpg) */
+            
             .hero-image-profile {
                 width: 200px;
                 height: 200px;
             }
 
-            /* O neon gigante estava vazando a tela, reduzimos aqui */
+            
             .neon-glow {
                 width: 300px;
                 height: 300px;
             }
 
-            /* Seção de Projetos (image_3bac95.jpg) */
+            /* Seção de Projetos */
             .projects-section {
-                padding: 60px 5%; /* Diminui o respiro gigante no mobile */
+                padding: 20px 5%; 
             }
             
             .projects-section h2 { 
@@ -492,19 +497,16 @@
                 margin-bottom: 30px; 
             }
 
-            /* Truque de mestre: largura máxima, mas adaptável */
             .project-card, .music-card {
                 width: 100%; 
                 max-width: 280px; 
                 margin: 0 auto;
             }
 
-            /* Abre espaço nas laterais para os botões do carrossel não ficarem em cima do card */
             .carousel-container {
-                padding: 20px 45px; 
+                padding: 20px 10px;
             }
 
-            /* Ajusta os botões para ficarem nas pontas da tela e menores */
             .carousel-btn {
                 width: 40px;
                 height: 40px;

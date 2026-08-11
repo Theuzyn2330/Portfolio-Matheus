@@ -1,5 +1,6 @@
 <script>
-    const cardWidth = 350;
+
+    // Script do carrossel
 
     function moveCarousel(direction, button) {
         const section = button?.closest('section');
@@ -7,19 +8,13 @@
 
         if (!track) return;
 
-        const visibleCards = Math.max(1, Math.floor(window.innerWidth / cardWidth));
-        const maxScroll = -(track.children.length - visibleCards) * cardWidth;
-        const currentPosition = parseInt(track.dataset.position || '0', 10) + (-direction * cardWidth);
-        let newPosition = currentPosition;
+        const card = track.querySelector('.project-card, .music-card');
+        if (!card) return;
 
-        if (newPosition > 0) {
-            newPosition = 0;
-        } else if (newPosition < maxScroll) {
-            newPosition = maxScroll;
-        }
+        const gap = 30;
+        const scrollAmount = card.offsetWidth + gap;
 
-        track.dataset.position = newPosition;
-        track.style.transform = `translateX(${newPosition}px)`;
+        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
         // Scripit do botão do menu
