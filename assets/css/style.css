@@ -15,6 +15,22 @@
             min-height: 100vh;
         }
 
+        /* --- MENU NO CELULAR  --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: #00f2fe;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
         /* --- IMAGEM FIXA DE FUNDO --- */
 .bg-background {
     position: fixed;
@@ -381,83 +397,63 @@
 
 
 
-/* ----CONTATO---- */
-
-
-        /* Container dos Botões */
-        .social-container {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* Estilo Base dos Botões */
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Efeito de Hover Geral */
-        .social-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            filter: brightness(1.1);
-        }
-
-        /* Cores Específicas por Rede Social */
-        .github {
-            background-color: #24292e;
-        }
-
-        .linkedin {
-            background-color: #0077b5;
-        }
-
-        .twitter {
-            background-color: #1da1f2;
-        }
-
-        .instagram {
-            background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
 
 
 
 /* --- RESPONSIVIDADE --- */
         
-        /* Tablets e telas médias */
-        @media (max-width: 968px) {
-            .hero {
-                flex-direction: column-reverse;
-                padding-top: 140px;
-                gap: 40px;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-            .hero-content h1 { 
-                font-size: 2.5rem; 
-            }
-            /* Centraliza a imagem no tablet */
-            .hero-image-profile { 
-                width: 250px; 
-                height: 250px; 
-                margin: 0 auto;
-            }
-            .nav-links { 
-                display: none; 
-            }
-        }
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column-reverse;
+        padding-top: 140px;
+        gap: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+    }
+    .hero-image-profile { 
+        width: 250px; 
+        height: 250px; 
+        margin: 0 auto;
+    }
+    
+    /* MOSTRA O BOTÃO HAMBÚRGUER */
+    .menu-toggle {
+        display: flex; 
+        margin-left: auto;         
+    }
+
+    /* ESCONDE O MENU NA LATERAL E PREPARA O ESTILO MOBILE */
+    .nav-links { 
+        position: absolute;
+        top: 100%; /* Fica logo abaixo do header */
+        right: -100%; /* Esconde fora da tela à direita */
+        
+        /* --- A MÁGICA ACONTECE AQUI --- */
+        width: 250px; /* Largura fixa, não cobre a tela toda */
+        height: 100vh;
+        
+        background: rgba(10, 10, 12, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center; /* Centraliza os links dentro do menu lateral */
+        justify-content: flex-start;
+        padding-top: 40px; /* Dá um respiro no topo */
+        gap: 30px;
+        transition: right 0.4s ease-in-out;
+        
+        /* --- ESTÉTICA DO MENU LATERAL --- */
+        border-left: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil */
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.6); /* Sombra para separar do fundo */
+    }
+
+    /* CLASSE QUE FARÁ O MENU APARECER QUANDO CLICADO */
+    .nav-links.active {
+        right: 0;
+    }
+}
 
         /* Celulares */
         @media (max-width: 768px) {
