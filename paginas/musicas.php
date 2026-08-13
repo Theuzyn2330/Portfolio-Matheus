@@ -12,7 +12,7 @@ $erroApi = null;
 
 if (!empty($apiKey) && !empty($videoIds)) {
 
-$url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}&key={$apiKey}";
+    $url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}&key={$apiKey}";
 
     // Requisição via cURL simples
     $ch = curl_init();
@@ -54,20 +54,23 @@ $url = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id={$videoIds}
                 <?php foreach ($videos as $video): 
                     $titulo = $video['snippet']['title'];
                     $canal = $video['snippet']['channelTitle'];
-                    $thumbnail = $video['snippet']['thumbnails']['high']['url'] ?? $video['snippet']['thumbnails']['default']['url'];
-                    $videoId = $video['id'];
-                    $linkYoutube = "https://www.youtube.com/watch?v={$videoId}";
+                    $videoId = $video['id']; // Pegamos o ID para usar no iframe
                 ?>
                 <div class="music-card">
-                    <img class="card-player" src="<?php echo $thumbnail; ?>" alt="Capa do Vídeo" style="object-fit: cover; aspect-ratio: 16/9; width: 100%;">
+                    <!-- Iframe do Miniplayer do YouTube -->
+                    <iframe 
+                        class="card-player" 
+                        src="https://www.youtube.com/embed/<?php echo $videoId; ?>" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="width: 100%; aspect-ratio: 16/9; border: none; object-fit: cover;">
+                    </iframe>
                     
                     <div class="card-info" style="padding: 10px;">
                         <h3 style="font-size: 0.9rem; margin-bottom: 5px;"><?php echo $canal; ?></h3>
                         <p style="font-size: 0.8rem; height: 2.4em; overflow: hidden;"><?php echo $titulo; ?></p>
-                        
-                        <a href="<?php echo $linkYoutube; ?>" target="_blank" style="display: block; margin-top: 10px; color: #FF0000; text-decoration: none; font-weight: bold; font-size: 0.85rem;">
-                            Assistir no YouTube <i class="fab fa-youtube"></i>
-                        </a>
                     </div>
                 </div>
                 <?php endforeach; ?>
