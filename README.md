@@ -187,6 +187,10 @@ Essa abordagem proporciona:
 - Composer
 - Tratamento de erros
 - Renderização dinâmica de componentes
+- Manipulação de DOM com Vanilla JavaScript
+- Criação de UI/UX interativa (Segmented Control / Toggle Switch animado)
+- Transições de interface e animações fluidas utilizando CSS (Transform/Transition)
+- Gerenciamento dinâmico de estado na interface do usuário (UI State)
 
 ---
 
