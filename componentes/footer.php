@@ -1,3 +1,10 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; <span id="current-year"></span> Matheus. Todos os direitos reservados.</p>
+        <p class="footer-credits">Desenvolvido com carinho e dedicação.</p>
+    </div>
+</footer>
+
 <script>
 
     // Script do carrossel
