@@ -214,36 +214,7 @@
             100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
 
-        /* Estilo do Rodapé */
-.site-footer {
-    background-color: #0f172a; /* Cor de fundo escura e moderna (ajuste para a cor do seu site) */
-    color: #94a3b8; /* Cor do texto suave */
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-credits {
-    font-size: 0.8rem;
-    color: #64748b;
-}
-
-/* Responsividade caso queira ajustar espaçamentos */
-@media (max-width: 768px) {
-    .site-footer {
-        padding: 20px 15px;
-    }
-}
+        
 
         /* --- SEÇÃO DO CARROSSEL (PROJETOS) --- */
         .projects-section {
@@ -547,3 +518,36 @@
             .btn-left { left: 0; }
             .btn-right { right: 0; }
         }
+
+        
+
+        /* Estilo do Rodapé */
+.site-footer {
+    background-color: #0f172a; 
+    color: #94a3b8; /* Cor do texto suave */
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-credits {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 20px 15px;
+    }
+}
