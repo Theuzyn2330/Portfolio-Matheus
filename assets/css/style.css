@@ -638,3 +638,195 @@
         justify-content: center;
     }
 }
+
+/* --- DETALHES DO PROJETO --- */
+.detalhes-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.detalhes-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    color: #b7c7d8;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    color: #00f2fe;
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    transform: translateX(-3px);
+}
+
+.detalhes-projeto {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 42px;
+    align-items: start;
+    background: rgba(15, 15, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 28px;
+    padding: 28px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* --- CONTAINER DA IMAGEM --- */
+.detalhes-imagem {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 2px solid rgba(0, 242, 254, 0.35);
+    box-shadow: 0 0 28px rgba(0, 242, 254, 0.15);
+    background: transparent;
+}
+
+.detalhes-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* --- AJUSTE DE PROPORÇÃO E DESTAQUE --- */
+.detalhes-projeto {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr; /* Aumenta a proporção da imagem na tela */
+    gap: 42px;
+    align-items: center;
+    background: rgba(15, 15, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 28px;
+    padding: 28px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.detalhes-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.projeto-badge {
+    align-self: flex-start;
+    background: rgba(0, 242, 254, 0.12);
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.28);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.detalhes-info h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 800;
+}
+
+.detalhes-info p {
+    color: #d0d7e0;
+    line-height: 1.8;
+    font-size: 1.02rem;
+    margin: 0;
+}
+
+.btn-externo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #00f2fe, #5ee7ff);
+    color: #0a0a0c;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-externo:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 0 24px rgba(0, 242, 254, 0.6);
+}
+
+.erro-container {
+    max-width: 700px;
+    margin: 120px auto 80px;
+    padding: 40px 28px;
+    border-radius: 22px;
+    background: rgba(15, 15, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.erro-container h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.erro-container p {
+    color: #d0d7e0;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.btn-voltar-erro {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: #00f2fe;
+    color: #090b10;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 22px rgba(0, 242, 254, 0.3);
+}
+
+@media (max-width: 768px) {
+    .detalhes-projeto {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .detalhes-imagem {
+        max-width: 100%;
+    }
+
+    .detalhes-info {
+        gap: 16px;
+    }
+}

@@ -15,16 +15,16 @@
     .contato-wrapper {
         min-height: 100vh;
         display: flex;
-        flex-direction: column; /* 🔹 MUDA A DIREÇÃO PARA COLUNA 🔹 */
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
-        padding-top: 80px; /* Compensa a altura do header fixo */
+        padding-top: 80px; 
     }
 
     /* Estilizando o Título */
     .contato-wrapper h3 {
         font-size: 2.5rem;
-        margin-bottom: 40px; /* 🔹 DÁ UM ESPAÇO ENTRE O TEXTO E OS BOTÕES 🔹 */
+        margin-bottom: 40px;
         color: #ffffff;
         text-align: center;
     }

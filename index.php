@@ -1,34 +1,32 @@
-
 <?php
-// Puxa a estrutura inicial, CSS, fontes e a abertura do body
-    include 'componentes/header.php';
+$page = $_GET['page'] ?? 'home';
 
-// Puxa barra de navegação
-    include 'componentes/menu.php';
-
+include 'componentes/header.php';
+include 'componentes/menu.php';
 ?>
 
-<!-- FUNDO --->
-   
 <div class="bg-background"></div>
 <div class="neon-glow"></div>
 
-
-    <div id= "conteudo">
-        <?php
-            // Puxa toda classe hero
+<div id="conteudo">
+    <?php
+        if ($page === 'detalhes_projeto') {
+            include 'paginas/detalhes_projeto.php';
+        } elseif ($page === 'sobre') {
+            include 'paginas/sobre.php';
+        } elseif ($page === 'contato') {
+            include 'paginas/contato.php';
+        } else {
             include 'paginas/home.php';
-
-        ?>
-    </div>
+        }
+    ?>
+</div>
 
 <?php
-    //Carrosel de projetos (certamente vou por pra aparecer so quando ir na opção que ta na barra de navegação)
-    include 'paginas/projetos.php';
+    if ($page === 'home' || $page === 'sobre' || $page === 'contato') {
+        include 'paginas/projetos.php';
+        include 'paginas/musicas.php';
+    }
 
-    //Carrosel listando musicas
-    include 'paginas/musicas.php';
-
-    //Puxa o fechamento das tags e os scripts finais
     include 'componentes/footer.php';
 ?>
