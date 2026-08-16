@@ -135,12 +135,9 @@
     <div class="conteudo-container">
         <div class="area-texto">
             <h2 id="titulo-conteudo" class="texto-ciano">Perfil Profissional</h2>
-            <p id="paragrafo-conteudo">
-Comecei minha formação em tecnologia em 2022, no curso técnico de <strong> Informática para Internet pelo IFMA </strong>. Em 2024, participei do Liga Jovem, pela Herbatec, e atualmente curso Engenharia de Software.
+            <p id="paragrafo-conteudo">Iniciei minha trajetória na tecnologia em 2022, realizando o curso técnico de Informática para Internet no IFMA, e em 2024 participei do programa Liga Jovem com o projeto Herbatec. Atualmente, curso Engenharia de Software e tenho como principal foco o desenvolvimento backend.
 
-Tenho foco em <strong> desenvolvimento backend </strong>, principalmente com PHP, SQL, PDO, JavaScript e APIs. Gosto de transformar ideias em sistemas funcionais e venho explorando também arquitetura de software, segurança, Docker, deploy e criação de produtos digitais.
-
-Mais do que apenas programar, gosto de construir soluções e transformar ideias em projetos reais.
+Trabalho na construção de sistemas funcionais e integração de APIs utilizando tecnologias como PHP, SQL, PDO e JavaScript. Busco ir além do código, aprofundando meus conhecimentos em arquitetura de software, segurança, Docker, deploy e criação de produtos digitais para transformar ideias em soluções reais e eficientes.
             </p>
         </div>
 

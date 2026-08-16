@@ -61,7 +61,7 @@
             const dados = {
                 profissional: {
                     titulo: "Perfil Profissional",
-                    texto: "Apaixonado por transformar ideias em software. Atuo no desenvolvimento de sistemas web, APIs e aplicações utilizando PHP, Python, JavaScript e SQL, combinando lógica de back-end, banco de dados e interfaces criativas para criar soluções eficientes e memoráveis.",
+                    texto: "Iniciei minha trajetória na tecnologia em 2022, realizando o curso técnico de Informática para Internet no IFMA, e em 2024 participei do programa Liga Jovem com o projeto Herbatec. Atualmente, curso Engenharia de Software e tenho como principal foco o desenvolvimento backend. Trabalho na construção de sistemas funcionais e integração de APIs utilizando tecnologias como PHP, SQL, PDO e JavaScript. Busco ir além do código, aprofundando meus conhecimentos em arquitetura de software, segurança, Docker, deploy e criação de produtos digitais para transformar ideias em soluções reais e eficientes.",
                     imagem: "/assets/imagens/profissional.jpeg"
                 },
                 pessoal: {
