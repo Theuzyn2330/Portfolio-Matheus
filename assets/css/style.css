@@ -729,6 +729,12 @@
     gap: 18px;
 }
 
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .projeto-badge {
     align-self: flex-start;
     background: rgba(0, 242, 254, 0.12);

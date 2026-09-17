@@ -22,7 +22,7 @@
                     <div class="card-info">
                         <h3> Integração com YouTube Data API v3</h3>
                         <p>Módulo em PHP que consome a YouTube Data API v3 via cURL, carregando as credenciais de forma segura com `.env` para renderizar dinamicamente os cards e players de vídeo na interface com tratamento de erros.</p>
-                       <!-- <a href="#" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a> -->
+                       <a href="index.php?page=detalhes_projeto&id=api" class="card-link">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
