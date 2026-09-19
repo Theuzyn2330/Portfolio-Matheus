@@ -12,7 +12,6 @@
             'imagem' => 'assets/imagens/profile.jpeg',
             'descricao' => 'Portfólio em PHP com layout moderno, visual escuro e neon, projetado para apresentar projetos, habilidades e identidade profissional de forma elegante e impactante. A página foi pensada para facilitar a navegação, destacar o trabalho e transmitir uma imagem sólida para clientes, recrutadores e parceiros.',
             'link' => 'https://github.com/Theuzyn2330',
-            'tags' => ['Crud','Banco de Dados', 'PHP']
 
         ],
 
