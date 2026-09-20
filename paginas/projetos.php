@@ -1,6 +1,10 @@
 
     <section class="projects-section" id="projetos">
-        <h2>Meus <span>Projetos</span></h2>
+        <div class="section-heading">
+            <p class="section-eyebrow">Ideias que ganharam forma</p>
+            <h2>Meus <span>Projetos</span></h2>
+            <p class="section-subtitle">Soluções web construídas com código, curiosidade e atenção aos detalhes.</p>
+        </div>
         
         <button class="carousel-btn btn-left" onclick="moveCarousel(-1, this)"><i class="fas fa-chevron-left"></i></button>
         <button class="carousel-btn btn-right" onclick="moveCarousel(1, this)"><i class="fas fa-chevron-right"></i></button>

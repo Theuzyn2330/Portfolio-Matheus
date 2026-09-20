@@ -225,13 +225,49 @@
         .projects-section h2 {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin: 5px 0 10px;
             font-weight: 800;
         }
 
         .projects-section h2 span {
             color: #00f2fe;
             text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin: 0 auto 35px;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .section-eyebrow {
+            color: #e000ff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            color: #a0a0a5;
+            line-height: 1.6;
+        }
+
+        .profile-heading {
+            margin-bottom: 20px;
+        }
+
+        .profile-heading .section-eyebrow {
+            margin-bottom: 5px;
+        }
+
+        .profile-heading h2 {
+            margin-bottom: 8px;
+        }
+
+        .profile-heading .section-subtitle {
+            margin-bottom: 0;
         }
 
         /* Container do Carrossel */
@@ -408,6 +444,116 @@
         .btn-left { left: 2%; }
         .btn-right { right: 2%; }
 
+        /* --- CARROSSEL DE SKILLS --- */
+        .skills-section {
+            padding: 80px 0 45px;
+            overflow: hidden;
+        }
+
+        .skills-heading {
+            max-width: 680px;
+            margin: 0 auto 35px;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        .skills-eyebrow {
+            color: #e000ff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .skills-heading h2 {
+            font-size: 2.5rem;
+            margin: 5px 0 10px;
+        }
+
+        .skills-heading h2 span { color: #00f2fe; }
+
+        .skills-heading > p:last-child {
+            color: #a0a0a5;
+            line-height: 1.6;
+        }
+
+        .skills-viewport {
+            overflow: hidden;
+            padding: 22px 0 34px;
+            cursor: grab;
+            touch-action: pan-y;
+        }
+
+        .skills-viewport.is-dragging { cursor: grabbing; }
+
+        .skills-track {
+            display: flex;
+            width: max-content;
+            will-change: transform;
+            user-select: none;
+        }
+
+        .skills-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding-right: 18px;
+        }
+
+        .skill-tag {
+            position: relative;
+            flex: 0 0 auto;
+            min-width: 148px;
+            min-height: 54px;
+            padding: 14px 20px;
+            border: 1px solid rgba(0, 242, 254, 0.45);
+            border-radius: 999px;
+            background: rgba(10, 10, 12, 0.78);
+            color: #fff;
+            cursor: pointer;
+            font: inherit;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .skill-tag:hover,
+        .skill-tag[aria-expanded="true"] {
+            border-color: #e000ff;
+            box-shadow: 0 0 22px rgba(224, 0, 255, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .skill-tag-name { white-space: nowrap; }
+
+        .skill-description {
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+            bottom: calc(100% + 14px);
+            width: 230px;
+            padding: 12px 14px;
+            border: 1px solid rgba(0, 242, 254, 0.5);
+            border-radius: 10px;
+            background: rgba(10, 10, 12, 0.96);
+            color: #d9d9df;
+            font-size: 0.78rem;
+            line-height: 1.45;
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, 8px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .skill-tag[aria-expanded="true"] .skill-description {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .skills-hint {
+            color: #85858f;
+            font-size: 0.78rem;
+            text-align: center;
+        }
+
 /* --- RESPONSIVIDADE --- */
         
 @media (max-width: 968px) {
@@ -496,8 +642,12 @@
             
             .projects-section h2 { 
                 font-size: 2rem; 
-                margin-bottom: 30px; 
+                margin-top: 5px;
             }
+
+            .section-heading { margin-bottom: 25px; }
+
+            .section-eyebrow { font-size: 0.7rem; }
 
             .project-card, .music-card {
                 width: 100%; 
@@ -517,6 +667,24 @@
             
             .btn-left { left: 0; }
             .btn-right { right: 0; }
+
+            .skills-section { padding-top: 55px; }
+
+            .skills-heading h2 { font-size: 2rem; }
+
+            .skill-tag { min-width: 132px; }
+
+            .skill-description {
+                position: fixed;
+                left: 50%;
+                bottom: 20px;
+                width: min(82vw, 310px);
+                transform: translate(-50%, 8px);
+            }
+
+            .skill-tag[aria-expanded="true"] .skill-description {
+                transform: translate(-50%, 0);
+            }
         }
 
 

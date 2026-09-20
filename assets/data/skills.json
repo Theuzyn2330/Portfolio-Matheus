@@ -1,0 +1,38 @@
+[
+    {
+        "tag": "PHP",
+        "descricao": "Desenvolvimento de sistemas web, regras de negocio, sessoes, autenticacao e renderizacao dinamica no servidor."
+    },
+    {
+        "tag": "MySQL",
+        "descricao": "Modelagem de dados, consultas, relacionamentos e estrutura de banco para aplicacoes consistentes."
+    },
+    {
+        "tag": "PDO",
+        "descricao": "Acesso seguro ao banco com prepared statements, transacoes e tratamento de consultas no PHP."
+    },
+    {
+        "tag": "JavaScript",
+        "descricao": "Interacoes de interface, consumo de APIs e comportamentos fluidos para experiencias web mais completas."
+    },
+    {
+        "tag": "HTML e CSS",
+        "descricao": "Estrutura semantica, layouts responsivos e interfaces com identidade visual para desktop e celular."
+    },
+    {
+        "tag": "API",
+        "descricao": "Integracao entre servicos, tratamento de respostas e criacao de funcionalidades orientadas a dados."
+    },
+    {
+        "tag": "YoutubeV3",
+        "descricao": "Consumo da YouTube Data API v3 para buscar metadados, validar respostas e renderizar conteudo dinamico."
+    },
+    {
+        "tag": "Docker",
+        "descricao": "Empacotamento e execucao de aplicacoes em ambientes reproduziveis para desenvolvimento e deploy."
+    },
+    {
+        "tag": "Git",
+        "descricao": "Versionamento de codigo, organizacao de mudancas e colaboracao durante a evolucao dos projetos."
+    }
+]

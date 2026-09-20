@@ -29,6 +29,128 @@
             track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
 
+        // Carrossel continuo de skills com clique, touch e arraste.
+        document.querySelectorAll('[data-skills-carousel]').forEach((carousel) => {
+            const viewport = carousel.querySelector('.skills-viewport');
+            const track = carousel.querySelector('[data-skills-track]');
+            const firstGroup = track?.querySelector('.skills-group');
+            if (!viewport || !track || !firstGroup) return;
+
+            let offset = 0;
+            let lastX = 0;
+            let lastTime = 0;
+            let velocity = 0;
+            let dragging = false;
+            let activePointer = null;
+            let movedDuringDrag = false;
+            let holdTimer = null;
+            let longPressTriggered = false;
+            const baseSpeed = 0.45;
+
+            function loopWidth() {
+                return firstGroup.getBoundingClientRect().width;
+            }
+
+            function normalizeOffset() {
+                const width = loopWidth();
+                if (!width) return;
+                while (offset <= -width) offset += width;
+                while (offset > 0) offset -= width;
+            }
+
+            function render() {
+                normalizeOffset();
+                track.style.transform = `translate3d(${offset}px, 0, 0)`;
+            }
+
+            function animate() {
+                if (!dragging) {
+                    offset -= baseSpeed + Math.min(Math.abs(velocity), 3);
+                    velocity *= 0.96;
+                    render();
+                }
+                requestAnimationFrame(animate);
+            }
+
+            viewport.addEventListener('pointerdown', (event) => {
+                dragging = true;
+                activePointer = event.pointerId;
+                lastX = event.clientX;
+                lastTime = performance.now();
+                velocity = 0;
+                movedDuringDrag = false;
+                longPressTriggered = false;
+                const pressedTag = event.target.closest('.skill-tag');
+                if (pressedTag && event.pointerType === 'touch') {
+                    holdTimer = setTimeout(() => {
+                        carousel.querySelectorAll('.skill-tag[aria-expanded="true"]').forEach((openTag) => {
+                            openTag.setAttribute('aria-expanded', 'false');
+                        });
+                        pressedTag.setAttribute('aria-expanded', 'true');
+                        longPressTriggered = true;
+                    }, 450);
+                }
+                viewport.classList.add('is-dragging');
+                viewport.setPointerCapture(event.pointerId);
+            });
+
+            viewport.addEventListener('pointermove', (event) => {
+                if (!dragging || event.pointerId !== activePointer) return;
+                const now = performance.now();
+                const deltaX = event.clientX - lastX;
+                const elapsed = Math.max(now - lastTime, 1);
+                offset += deltaX;
+                if (Math.abs(deltaX) > 3) {
+                    movedDuringDrag = true;
+                    clearTimeout(holdTimer);
+                }
+                velocity = Math.min(Math.abs(deltaX / elapsed) * 16, 3);
+                lastX = event.clientX;
+                lastTime = now;
+                render();
+            });
+
+            function stopDragging(event) {
+                if (!dragging || event.pointerId !== activePointer) return;
+                clearTimeout(holdTimer);
+                dragging = false;
+                activePointer = null;
+                viewport.classList.remove('is-dragging');
+            }
+
+            viewport.addEventListener('pointerup', stopDragging);
+            viewport.addEventListener('pointercancel', stopDragging);
+
+            carousel.addEventListener('click', (event) => {
+                const tag = event.target.closest('.skill-tag');
+                if (longPressTriggered) {
+                    longPressTriggered = false;
+                    return;
+                }
+                if (!tag || dragging || movedDuringDrag) {
+                    movedDuringDrag = false;
+                    return;
+                }
+
+                const isOpen = tag.getAttribute('aria-expanded') === 'true';
+                carousel.querySelectorAll('.skill-tag[aria-expanded="true"]').forEach((openTag) => {
+                    openTag.setAttribute('aria-expanded', 'false');
+                });
+                tag.setAttribute('aria-expanded', String(!isOpen));
+            });
+
+            carousel.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape') return;
+                carousel.querySelectorAll('.skill-tag[aria-expanded="true"]').forEach((tag) => {
+                    tag.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            window.addEventListener('resize', render);
+            render();
+            requestAnimationFrame(animate);
+        });
+
         // Script do botão do menu
         const menuToggle = document.querySelector('#mobile-menu');
         const navLinks = document.querySelector('.nav-links');

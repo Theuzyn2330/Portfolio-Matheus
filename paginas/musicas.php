@@ -37,7 +37,11 @@ if (!empty($apiKey) && !empty($videoIds)) {
 ?>
 
 <section class="projects-section" id="musicas">
-    <h2>Músicas que eu curto</h2>
+    <div class="section-heading">
+        <p class="section-eyebrow">Trilha sonora do processo</p>
+        <h2>Músicas que eu curto</h2>
+        <p class="section-subtitle">Algumas faixas que acompanham minhas sessões de criação e concentração.</p>
+    </div>
 
     <button class="carousel-btn btn-left" onclick="moveCarousel(-1, this)"  title="Tudo usando API Youtube V3 :)" ><i class="fas fa-chevron-left"></i></button>
     <button class="carousel-btn btn-right" onclick="moveCarousel(1, this)"  title="Tudo usando API Youtube V3 :)" ><i class="fas fa-chevron-right"></i></button>

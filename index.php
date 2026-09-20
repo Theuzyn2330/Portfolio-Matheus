@@ -24,6 +24,7 @@ include 'componentes/menu.php';
 
 <?php
     if ($page === 'home' || $page === 'sobre' || $page === 'contato') {
+        include 'paginas/skills.php';
         include 'paginas/projetos.php';
         include 'paginas/musicas.php';
     }
