@@ -479,7 +479,7 @@
 
         .skills-viewport {
             overflow: hidden;
-            padding: 22px 0 34px;
+            padding: 118px 0 34px;
             cursor: grab;
             touch-action: pan-y;
         }
@@ -537,14 +537,13 @@
             color: #d9d9df;
             font-size: 0.78rem;
             line-height: 1.45;
-            opacity: 0;
+            display: none;
             pointer-events: none;
             transform: translate(-50%, 8px);
-            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
         .skill-tag[aria-expanded="true"] .skill-description {
-            opacity: 1;
+            display: block;
             transform: translate(-50%, 0);
         }
 
@@ -675,11 +674,7 @@
             .skill-tag { min-width: 132px; }
 
             .skill-description {
-                position: fixed;
-                left: 50%;
-                bottom: 20px;
                 width: min(82vw, 310px);
-                transform: translate(-50%, 8px);
             }
 
             .skill-tag[aria-expanded="true"] .skill-description {
