@@ -1,38 +1,66 @@
 [
     {
         "tag": "PHP",
-        "descricao": "Desenvolvimento de sistemas web, regras de negocio, sessoes, autenticacao e renderizacao dinamica no servidor."
+        "descricao": "Construo sistemas web, painéis administrativos, autenticação e regras de negócio."
     },
     {
         "tag": "MySQL",
-        "descricao": "Modelagem de dados, consultas, relacionamentos e estrutura de banco para aplicacoes consistentes."
+        "descricao": "Estruturo bancos, relacionamentos e consultas para manter os dados dos sistemas organizados."
     },
     {
         "tag": "PDO",
-        "descricao": "Acesso seguro ao banco com prepared statements, transacoes e tratamento de consultas no PHP."
+        "descricao": "Faço a comunicação entre PHP e banco de dados com consultas preparadas e operações seguras."
     },
     {
         "tag": "JavaScript",
-        "descricao": "Interacoes de interface, consumo de APIs e comportamentos fluidos para experiencias web mais completas."
+        "descricao": "Dou vida às interfaces com interações, filtros, validações e funcionalidades dinâmicas."
     },
     {
         "tag": "HTML e CSS",
-        "descricao": "Estrutura semantica, layouts responsivos e interfaces com identidade visual para desktop e celular."
+        "descricao": "Transformo layouts em interfaces responsivas para desktop e celular."
     },
     {
-        "tag": "API",
-        "descricao": "Integraçãoo entre servicos, tratamento de respostas e criação de funcionalidades orientadas a dados."
+        "tag": "APIs REST",
+        "descricao": "Crio e consumo endpoints para conectar sistemas, serviços e funcionalidades."
     },
     {
-        "tag": "YoutubeV3",
-        "descricao": "Consumo da YouTube Data API v3 para buscar metadados, validar respostas e renderizar conteudo dinamico."
+        "tag": "YouTube Data API v3",
+        "descricao": "Integro aplicações ao YouTube para buscar vídeos e renderizar conteúdo dinamicamente."
     },
     {
         "tag": "Docker",
-        "descricao": "Empacotamento e execucao de aplicacoes em ambientes reproduziveis para desenvolvimento e deploy."
+        "descricao": "Uso containers para padronizar ambientes e facilitar a execução dos projetos."
     },
     {
         "tag": "Git",
-        "descricao": "Versionamento de codigo, organizacao de mudancas e colaboracao durante a evolucao dos projetos."
+        "descricao": "Versiono o código, organizo mudanças e acompanho a evolução dos projetos."
+    },
+    {
+        "tag": "GitHub",
+        "descricao": "Mantenho meus projetos, histórico de desenvolvimento e documentação em um só lugar."
+    },
+    {
+        "tag": "Autenticação",
+        "descricao": "Implemento login, sessões e controle de acesso para proteger áreas e funcionalidades."
+    },
+    {
+        "tag": "CRUD",
+        "descricao": "Desenvolvo fluxos completos de cadastro, consulta, edição e exclusão de dados."
+    },
+    {
+        "tag": "JWT",
+        "descricao": "Aplico autenticação baseada em tokens para proteger endpoints e APIs."
+    },
+    {
+        "tag": "SQL",
+        "descricao": "Escrevo consultas para buscar, filtrar, relacionar e manipular dados."
+    },
+    {
+        "tag": "Responsive Design",
+        "descricao": "Adapto interfaces para diferentes tamanhos de tela sem deixar o usuário brigando com o layout."
+    },
+    {
+        "tag": "Deploy",
+        "descricao": "Coloco aplicações em produção e configuro o necessário para mantê-las funcionando online."
     }
 ]
