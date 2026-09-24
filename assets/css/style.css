@@ -659,6 +659,7 @@
             }
 
             .carousel-btn {
+                display: none;
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
