@@ -11,7 +11,7 @@ Apaixonado por transformar ideias em software. Atuo no desenvolvimento de sistem
 
         <div class="hero-image-profile">
             <div class="img-box">
-                <img src="assets/imagens/profile.jpeg" alt="Sua Foto">
+                <img src="assets/imagens/profile.jpg" alt="Sua Foto">
             </div>
         </div>
     </main>
