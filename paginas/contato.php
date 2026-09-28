@@ -79,12 +79,12 @@
 
         <!-- Vou por depois-->
 
-        <!-- Botão do LinkedIn 
-        <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+        Botão do LinkedIn 
+        <a href="https://www.linkedin.com/in/matheus-azevedo-235492339/" target="_blank" class="social-btn linkedin">
             <i class="fab fa-linkedin"></i> LinkedIn
         </a>
 
-         -->
+         
 
         <!-- Botão do Twitter/X
         <a href="https://twitter.com" target="_blank" class="social-btn twitter">
